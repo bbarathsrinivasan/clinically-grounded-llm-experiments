@@ -1,0 +1,13 @@
+{
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "config_commit": null,
+  "frozen": true,
+  "dimension": 384,
+  "max_section_tokens": 67,
+  "encoder_token_limit": 256,
+  "pooling": "Mean normalized feature-section vectors; normalize final vector",
+  "classifier": "train-fold median imputation, StandardScaler, balanced LogisticRegression C=1 on concatenated raw and frozen vectors",
+  "folds": "identical to previous experiment",
+  "unique_sections": 10098,
+  "cache_fingerprint": "a8330ffc17195446d9a30f484e9e13b868b89b7efce635d90529c0f703bbbeb0"
+}

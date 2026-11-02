@@ -1,0 +1,13 @@
+scope,mode,policy,balanced_accuracy,macro_f1
+ced_clean,numeric_hybrid,selected_dropout,0.23301192890949482,0.2310867126455211
+ced_clean,numeric_hybrid,zero_dropout,0.25045820052158796,0.18175227535361083
+ced_clean,raw,selected_dropout,0.28100550565053606,0.24789984088493006
+ced_clean,raw,zero_dropout,0.2654748623587366,0.1877714170560346
+globem_tier1_clean,numeric_hybrid,selected_dropout,0.30371797795847266,0.2920188687755906
+globem_tier1_clean,numeric_hybrid,zero_dropout,0.2876640439241166,0.23877798636659853
+globem_tier1_clean,raw,selected_dropout,0.30252388971183475,0.25996845744139907
+globem_tier1_clean,raw,zero_dropout,0.305939203285991,0.2214504280802645
+tier1_clean,numeric_hybrid,selected_dropout,0.3246812375861675,0.2997214699348519
+tier1_clean,numeric_hybrid,zero_dropout,0.3095525721527351,0.2629299754637132
+tier1_clean,raw,selected_dropout,0.3162198676855844,0.2804493813174018
+tier1_clean,raw,zero_dropout,0.2980634162657557,0.2253405669883597

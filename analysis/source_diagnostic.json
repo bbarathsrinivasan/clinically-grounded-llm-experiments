@@ -1,0 +1,10 @@
+[
+  {
+    "features": "coverage",
+    "source_accuracy": 1.0
+  },
+  {
+    "features": "reference_counts",
+    "source_accuracy": 0.9992447129909365
+  }
+]

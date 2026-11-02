@@ -1,0 +1,42 @@
+{
+  "C_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "dropout_probabilities": [
+    0.0,
+    0.25,
+    0.5
+  ],
+  "method": "Exact weighted expectation of one-group random dropout: clean weight 1-p; each of three masked copies p/3; total weight per original row 1",
+  "selection": "inner 3-fold mean macro-F1 over clean plus three single-group outages, equally weighted; outer fixed 5-fold subject splits",
+  "controls": "p=0 retuned with same robustness objective; selected arm may choose p=0",
+  "preprocessing": "fit imputer/scaler on clean training rows only, identical across p; encoder frozen",
+  "masks": {
+    "none": [],
+    "sleep": [
+      "sleep_hours",
+      "sleep_efficiency",
+      "wake_after_sleep_min",
+      "bedtime_min"
+    ],
+    "mobility_environment": [
+      "home_time_min",
+      "walking_min",
+      "bt_unique_devices"
+    ],
+    "phone_communication": [
+      "screen_night_min",
+      "screen_total_min",
+      "screen_unlocks",
+      "calls_out",
+      "conversation_min"
+    ]
+  },
+  "max_section_tokens": 67,
+  "limitations": "Exploratory adaptive reuse of outer folds; simulated outages; selected dropout search has greater search budget than fixed p=0 control; no untouched final test"
+}

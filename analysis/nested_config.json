@@ -1,0 +1,17 @@
+{
+  "C_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "mean inner 3-fold subject-grouped macro-F1; ties prefer smaller C",
+  "outer": "same five subject-grouped folds, seed42",
+  "inner_seed": 117,
+  "encoder": "frozen all-MiniLM-L6-v2",
+  "preprocessing": "cutoffs, medians and scaling fitted within each inner/outer training split",
+  "max_section_tokens": 67,
+  "note": "Adaptive exploratory comparison on repeatedly used outer folds; not a final untouched test"
+}

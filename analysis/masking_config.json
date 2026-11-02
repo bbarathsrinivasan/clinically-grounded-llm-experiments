@@ -1,0 +1,29 @@
+{
+  "masks": {
+    "none": [],
+    "sleep": [
+      "sleep_hours",
+      "sleep_efficiency",
+      "wake_after_sleep_min",
+      "bedtime_min"
+    ],
+    "mobility_environment": [
+      "home_time_min",
+      "walking_min",
+      "bt_unique_devices"
+    ],
+    "phone_communication": [
+      "screen_night_min",
+      "screen_total_min",
+      "screen_unlocks",
+      "calls_out",
+      "conversation_min"
+    ]
+  },
+  "protocol": "Train unmasked, test one absent feature family; count=0 and aggregates=NaN; regenerate summaries using training-only thresholds",
+  "C": "reuse nested_selected.csv, no retuning",
+  "encoder": "frozen all-MiniLM-L6-v2, mean feature-section pooling",
+  "max_tokens": 67,
+  "unmasked_prediction_check": "exact match to nested_predictions.csv for every row/model/scope",
+  "limitations": "Controlled simultaneous group removal, not natural missingness or unseen-dataset validation. Repeated exploratory use of outer folds. Fixed-prediction bootstrap does not include refit uncertainty."
+}
