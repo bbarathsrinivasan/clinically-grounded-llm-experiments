@@ -2,6 +2,8 @@
 
 Private research repository containing code and aggregate results. Individual-level data, subject identifiers, predictions, and example summaries are excluded.
 
+See [progress.md](progress.md) for the experiment sequence, findings, and next steps.
+
 ## Reproduce
 
 Run from this repository root. Install `requirements.txt` in a virtual environment. Obtain the dataset through its approved channel and set `CLINICAL_DATASET` to its local path, or place it at `data/anchored_with_phq4_only_aug.json` (ignored by Git). The expected dataset checksum is in `analysis/summary.json`.
@@ -15,6 +17,7 @@ Run `python analysis/audit.py "$CLINICAL_DATASET"` first to create local record 
 5. `python analysis/nested_regularization.py`
 6. `python analysis/sensor_masking.py`
 7. `python analysis/sensor_dropout.py`
+8. `python analysis/repeated_dropout.py`
 
 The encoder experiments require `sentence-transformers/all-MiniLM-L6-v2` already cached locally. To download it before the offline experiment runs: `python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"`.
 

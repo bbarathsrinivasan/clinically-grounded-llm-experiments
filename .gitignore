@@ -46,3 +46,11 @@ analysis/*.md
 !analysis/dropout_paired_intervals.csv
 !analysis/dropout_config.json
 
+!analysis/repeated_dropout_results.csv
+!analysis/repeated_dropout_robustness.csv
+!analysis/repeated_dropout_search.csv
+!analysis/repeated_dropout_selected.csv
+!analysis/repeated_dropout_summary.csv
+!analysis/repeated_dropout_seed_differences.csv
+!analysis/repeated_dropout_paired_intervals.csv
+!analysis/repeated_dropout_config.json

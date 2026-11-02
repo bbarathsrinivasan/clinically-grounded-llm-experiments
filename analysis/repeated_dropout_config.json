@@ -1,0 +1,50 @@
+{
+  "outer_seeds": [
+    42,
+    7,
+    19,
+    73
+  ],
+  "seed42": "reused previously completed dropout experiment",
+  "inner_seed": 117,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "C_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "dropout_probabilities": [
+    0.0,
+    0.25,
+    0.5
+  ],
+  "selection": "unchanged mean inner macro-F1 over four equally weighted conditions",
+  "preprocessing": "unchanged clean-train medians/scaling; frozen MiniLM; weighted expected dropout",
+  "masks": {
+    "none": [],
+    "sleep": [
+      "sleep_hours",
+      "sleep_efficiency",
+      "wake_after_sleep_min",
+      "bedtime_min"
+    ],
+    "mobility_environment": [
+      "home_time_min",
+      "walking_min",
+      "bt_unique_devices"
+    ],
+    "phone_communication": [
+      "screen_night_min",
+      "screen_total_min",
+      "screen_unlocks",
+      "calls_out",
+      "conversation_min"
+    ]
+  },
+  "bootstrap": "1000 paired subject resamples; preserve same sampled subjects across seeds and conditions; fixed fitted predictions",
+  "limitations": "Repeated subjects across seeds, no independent test cohort; adaptive exploratory protocol; conditional bootstrap excludes refitting uncertainty; multiple comparisons unadjusted"
+}
